@@ -1,11 +1,13 @@
+#!/usr/bin/env python
+
+#--- bibiliotheques ---#
 import serial
 import time
 
 # --- liaison serie --- #
 ser = serial.Serial('/dev/ttyUSB0', 1200, timeout=2)
 
-#os.system('/home/pi/minitel-server/serial_init.sh')
-
+#--- commandes hayes ---#
 at_start = 'AT\r\n'
 at_reset = 'ATZ\r\n'
 at_escap = 'ATE1\r\n'
@@ -37,4 +39,9 @@ time.sleep(1)
 ser.write(at_reset)
 time.sleep(1)
 
+#--- fermeture liaison serie ---#
 ser.close()
+
+#--- sortie script ---#
+sys.exit(0)
+
