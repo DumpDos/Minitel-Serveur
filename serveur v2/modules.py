@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # coding: utf-8
 
+import random
 import urllib
 from bs4 import BeautifulSoup
 
@@ -31,3 +32,17 @@ def metar(oaci_code):
           metar_var = "Aucune information disponible pour ce terrain"
 
     return (metar_var)
+
+def jeux_des(nombre):
+	
+    var_0 = int(nombre)
+    alea = randrange(1,6)
+	
+    if var_0 = alea:
+	result = True
+    else:
+	result = False
+	
+    return (result, alea) 
+	
+	
