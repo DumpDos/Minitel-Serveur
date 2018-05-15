@@ -83,7 +83,28 @@ def page_metar():
 
         if touche == pynitel.sommaire:
             break
+	
+def page_jeux():
 
+    touche = pynitel.repetition
+
+    while True:
+
+        if touche == pynitel.repetition:
+           pynitel.home()
+           pynitel.xdraw('pages/page_jeux.vdt')
+        
+	(jeux_code,touche) = pynitel.input(14, 19, 4, data='')
+        
+	if touche == pynitel.envoi:
+		
+	   if jeux_code == "DES":   
+	      pynitel.xdraw('pages/page_jeux_des.vdt')
+	      (jeux_nb,touche) = pynitel.input(14, 19, 4, data='')
+	      (result_des) = modules.jeux_des(nb)
+
+        if touche == pynitel.sommaire:
+            break
 	
 def page_menu(code):
 
