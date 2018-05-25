@@ -102,6 +102,11 @@ def page_jeux():
 	      pynitel.xdraw('pages/page_jeux_des.vdt')
 	      (jeux_nb,touche) = pynitel.input(14, 19, 4, data='')
 	      (result_des) = modules.jeux_des(nb)
+	   
+           if jeux_code == "MOTS"
+	      pynitel.xdraw('pages/page_jeux_mots.vdt')
+	      (jeux_nb,touche) = pynitel.input(14, 19, 4, data='')
+	      (result_mot) = modules.jeux_mots(nb)
 
         if touche == pynitel.sommaire:
             break
